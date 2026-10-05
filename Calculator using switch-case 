@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class Calculator 
+    {
+        public static void main(String[] args)
+        {
+            int value1, value2, answer;
+            char choice;
+            Scanner sc = new Scanner(System.in);
+            
+            System.out.println("Enter the first integer value: ");
+            value1 = sc.nextInt();
+
+            System.out.println("Enter the second integer value: ");
+            value2 = sc.nextInt();
+
+            System.out.println("Enter the operation (+,-,*,/): ");
+            choice = sc.next().charAt(0);
+
+            switch(choice)
+                {
+                    case '+':
+                        answer = value1 + value2;
+                        System.out.println("The answer of "+value1+choice+value2+"="+ answer);
+                        break;
+
+                        case '-':
+                        answer = value1 - value2;
+                        System.out.println("The answer of"+value1+choice+value2+"="+answer);
+                        break;
+
+                        case '*':
+                        answer = value1 * value2;
+                        System.out.println("The answer of"+value1+choice+value2+"="+answer);
+                        break;
+
+                        case '/':
+                        answer = value1 / value2;
+                        System.out.println("The answer of"+value1+choice+value2+"="+answer);
+                        break;
+
+                    default:
+                        System.out.println("Invalid operation");
+                        break;                    
+                }
+            sc.close();
+        }
+    }
